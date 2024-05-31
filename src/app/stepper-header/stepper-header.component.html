@@ -1,0 +1,3 @@
+<p [class.active]="(state$ | async) === 'active'"><ng-content /></p>
+
+<app-stepper-header-underline [headerState]="state$ | async" [index]="index" />

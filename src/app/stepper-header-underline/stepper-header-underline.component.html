@@ -1,0 +1,24 @@
+<div class="state">
+  <div class="line">
+    <div
+      *ngIf="headerState === 'active' || headerState === 'completed'"
+      class="primary"
+      [class.rounded-left]="index === 0"
+    ></div>
+    <div
+      *ngIf="headerState === 'completed'"
+      class="secondary"
+      [class.rounded-left]="index === 0"
+    ></div>
+  </div>
+
+  <div class="index" [ngClass]="headerState">
+    <ng-template [ngIf]="headerState === 'completed'">
+      <mat-icon svgIcon="check"></mat-icon>
+    </ng-template>
+
+    <ng-template [ngIf]="headerState !== 'completed'">
+      {{ index + 1 }}
+    </ng-template>
+  </div>
+</div>

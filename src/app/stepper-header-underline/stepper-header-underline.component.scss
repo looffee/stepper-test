@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+}
+
+.index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #0c0c0c;
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  text-align: center;
+  font-family: Outfit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+
+  mat-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 16px;
+    height: 16px;
+  }
+
+  &.active {
+    background-color: #22ece9;
+    border-color: #22ece9;
+    color: #0c0c0c;
+  }
+
+  &.completed {
+    background-color: #202020;
+    border-color: #202020;
+    color: #a5a5a5;
+  }
+
+  &.not-visited {
+    background-color: #202020;
+    border-color: #383838;
+    color: #a5a5a5;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  & > * {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+  }
+
+  .primary {
+    background-color: #22ece9;
+
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  .secondary {
+    background-color: #202020;
+  }
+}
+
+.state {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+}
+
+.rounded-left {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}

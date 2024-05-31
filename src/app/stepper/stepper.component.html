@@ -1,0 +1,10 @@
+<div class="headers" [@stepperSelectedIndex]="selectedStepChanged$ | async">
+  <app-stepper-header
+    *ngFor="let step of steps; index as i"
+    [class.active]="i === selectedIndex"
+    [index]="i"
+    (click)="selectStep(i)"
+  >
+    {{ step.label }}
+  </app-stepper-header>
+</div>
